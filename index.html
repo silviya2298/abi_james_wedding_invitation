@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>Abiya &amp; James – Wedding Invitation</title>
+<title>James &amp; Abiya – Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&text=AJ&display=swap" rel="stylesheet">
 <script>
 // Always start fresh at the intro: no restored scroll position, no #section in the URL, no back/forward-cache resume
@@ -57,7 +57,8 @@ p{margin:.4rem 0}
 .names{font-size:clamp(3.2rem,13vw,5.4rem);color:var(--violet)}
 .shine{background:linear-gradient(110deg,var(--violet) 38%,#c4b2ec 50%,var(--violet) 62%);background-size:250% 100%;background-position:100% 0;
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.amp{font-family:var(--script);font-size:clamp(2.4rem,9vw,3.6rem);color:var(--sage);display:block;margin:.2rem 0}
+.amp{font-family:var(--serif);font-style:italic;font-size:clamp(2rem,8vw,2.8rem);color:var(--sage);display:block;margin:.4rem 0;line-height:1}
+.person .parents{margin-top:.35rem;font-style:italic;font-weight:600;color:var(--ink);font-size:.95rem}
 .person{margin:1.2rem 0}
 .person .role{color:var(--soft);font-size:.9rem;display:block}
 .person strong{font-weight:600;font-size:1.2rem;display:block;color:var(--ink)}
@@ -72,6 +73,9 @@ p{margin:.4rem 0}
 .countdown span{font-size:.75rem;color:var(--soft)}
 .venue{margin:1.3rem 0}
 .venue h3{font-family:var(--script);font-weight:400;color:var(--plum);font-size:2.3rem;line-height:1.2}
+.btn.map{display:inline-flex;align-items:center;gap:.45rem;margin-top:.7rem;padding:.45rem 1.15rem .45rem .95rem;font-size:.88rem;border-color:rgba(91,75,154,.55)}
+.btn.map svg{width:17px;height:17px;flex:none;fill:none;stroke:var(--gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+.btn.map:hover svg,.btn.map:focus-visible svg{stroke:#f1dfb5}
 .btn{display:inline-block;margin-top:1.2rem;padding:.6rem 1.5rem;border:1px solid var(--violet);color:var(--violet);background:rgba(255,255,255,.6);text-decoration:none;border-radius:2rem;transition:background .25s,color .25s}
 .btn:hover,.btn:focus-visible{background:var(--violet);color:#fff;outline:none}
 .compliments{margin-top:2.5rem;color:var(--soft);font-style:italic}
@@ -91,7 +95,17 @@ p{margin:.4rem 0}
 #cover .names{font-size:clamp(2.8rem,12vw,4.6rem);white-space:nowrap}
 #cover .cv{display:inline-block}
 #cover .amp-c{font-family:var(--serif);font-style:italic;font-size:.62em;color:var(--sage);margin:0 .12em;vertical-align:.08em}
-#open{margin-top:1.8rem;background:rgba(255,255,255,.6);font:inherit;cursor:pointer}
+#open{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.65rem;margin-top:1.9rem;padding:.9rem 2.2rem;border:0;border-radius:999px;
+  font:600 .82rem/1 var(--serif);letter-spacing:.16em;text-transform:uppercase;color:#fff;cursor:pointer;
+  background:linear-gradient(135deg,#9a89d6 0%,#6a59ad 45%,#4a3d85 100%);
+  box-shadow:0 10px 26px rgba(74,61,133,.35),0 0 0 0 rgba(200,165,95,.55);transition:transform .3s ease,filter .3s ease}
+#open::before{content:"";position:absolute;inset:4px;border:1px solid rgba(236,214,163,.75);border-radius:inherit;pointer-events:none}
+#open::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-120%) skewX(-20deg);animation:btnShine 3.6s ease-in-out 1.5s infinite;pointer-events:none}
+#open svg{width:18px;height:18px;flex:none;stroke:#f1dfb5;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+#open:hover,#open:focus-visible{background:linear-gradient(135deg,#a594e0 0%,#7262b8 45%,#51438f 100%);color:#fff;transform:translateY(-2px);filter:brightness(1.05)}
+#open:active{transform:scale(.97)}
+#open:disabled{cursor:default}
+@keyframes btnShine{0%{transform:translateX(-120%) skewX(-20deg)}55%,100%{transform:translateX(330%) skewX(-20deg)}}
 @media (max-height:540px){#cover .seal{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -113,7 +127,7 @@ p{margin:.4rem 0}
       <circle cx="66" cy="66" r="49" fill="none" stroke="#e6cf9c" stroke-width="1.2"/>
       <circle cx="66" cy="66" r="45.5" fill="none" stroke="#e6cf9c" stroke-width=".6" opacity=".6"/>
       <g font-family="Parisienne,'Snell Roundhand',cursive" font-size="36" fill="#fbf8ff" text-anchor="middle">
-        <text x="40" y="77" font-size="35">A</text><text x="91" y="75" font-size="32">J</text>
+        <text x="44" y="75" font-size="32">J</text><text x="88" y="77" font-size="35">A</text>
       </g>
     </symbol>
   </svg>
@@ -121,8 +135,8 @@ p{margin:.4rem 0}
   <div class="sheen"></div>
   <div class="inner">
     <p class="ref">You are invited to the wedding of</p>
-    <p class="script names"><span class="cv">Abiya</span> <span class="cv amp-c">&amp;</span> <span class="cv">James</span></p>
-    <button id="open" class="btn" autocomplete="off">Open invitation</button>
+    <p class="script names"><span class="cv">James</span> <span class="cv amp-c">&amp;</span> <span class="cv">Abiya</span></p>
+    <button id="open" class="btn" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>Open Invitation</button>
   </div>
 </div>
 
@@ -133,24 +147,24 @@ p{margin:.4rem 0}
     <p class="verse r1">“God has made everything beautiful in its time.”</p>
     <p class="ref r1">Ecclesiastes 3:11</p>
     <div class="rule"></div>
-    <div class="person r1"><strong>Mr. D. Anantha Selvakumar</strong><strong>&amp; Mrs. A. Lilly Bai</strong><span class="role">Kurumbur</span></div>
-    <p class="r1">We solicit your esteemed presence with family and friends on the auspicious occasion of the marriage of our daughter</p>
+    <p class="r1">Together with their families, we joyfully solicit your esteemed presence on the auspicious occasion of the marriage of</p>
   </div>
 </section>
 
 <section id="s2">
   <div class="wrap">
     <div class="person r2">
-      <p class="script names shine" id="n1">Abiya</p>
-      <strong>A. Abiya, M.C.A</strong>
-      <span class="role">Developer, Grimpanda Software LLC</span>
-    </div>
-    <span class="amp r2">with</span>
-    <div class="person r2">
-      <p class="script names shine" id="n2">James</p>
+      <p class="script names shine" id="n1">James</p>
       <strong>I. James, M.B.A</strong>
       <span class="role">Deputy Manager, City Union Bank Ltd</span>
-      <span class="role">S/o Mr. M. Immanuel Nadar &amp; Mrs. I. Chitra Selvi</span>
+      <span class="role parents">S/o Mr. M. Immanuel Nadar<br>&amp; Mrs. I. Chitra Selvi<br>Ernakulam</span>
+    </div>
+    <span class="amp r2">&amp;</span>
+    <div class="person r2">
+      <p class="script names shine" id="n2">Abiya</p>
+      <strong>A. Abiya, M.C.A</strong>
+      <span class="role">Developer, Grimpanda Software LLC</span>
+      <span class="role parents">D/o Mr. D. Anantha Selvakumar<br>&amp; Mrs. A. Lilly Bai<br>Kurumbur</span>
     </div>
   </div>
 </section>
@@ -163,12 +177,13 @@ p{margin:.4rem 0}
     <div class="rule"></div>
     <div class="venue r3">
       <h3>St. John’s Church</h3><p>Kurumbur</p>
+      <a class="btn map" href="https://www.google.com/maps?sca_esv=0bdd03951d38706d&amp;rlz=1C5KXLH_enIN1231IN1231&amp;cs=1&amp;kgmid=/g/1hf7j8s5g&amp;shem=dlvs1,epsd1,esd2e,ltae,rimspwouoe&amp;shndl=30&amp;kgs=d936fd912065b86f&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=in&amp;sa=X&amp;geocode=Ke_6CnZpjAM7MYU8JB-QmMdf&amp;daddr=H2QQ%2BHQ7,+Aaladivilai,+Kurumbur,+Angamangalam,+Tamil+Nadu+628211" target="_blank" rel="noopener" aria-label="Open St. John’s Church location in Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Church Location</a>
     </div>
     <p class="r3">and thereafter the function at</p>
     <div class="venue r3">
       <h3>Gnanam Hall</h3><p>Kurumbur, Thoothukudi Dist.</p>
+      <a class="btn map" href="https://www.google.com/maps/place/Gnanam+Mahal,+SH+40,+Angamangalam,+Tamil+Nadu+628207/@8.5912811,78.0403566,17z/data=!3m1!4b1!4m6!3m5!1s0x3b038c684f0a977b:0x79266320e9d507ac!8m2!3d8.5912859!4d78.040362!16s%2Fg%2F11bvtknnll?entry=ttu&amp;g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" aria-label="Open Gnanam Hall location in Google Maps"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>Hall Location</a>
     </div>
-    <a class="btn r3" href="https://www.google.com/maps/search/?api=1&query=St.+John%27s+Church+Kurumbur+Thoothukudi" target="_blank" rel="noopener">View church on map</a>
     <div class="countdown r3" id="cd" aria-label="Countdown to the wedding">
       <div><b id="d">0</b><span>days</span></div><div><b id="h">0</b><span>hours</span></div>
       <div><b id="m">0</b><span>mins</span></div><div><b id="s">0</b><span>secs</span></div>
@@ -206,7 +221,7 @@ p{margin:.4rem 0}
   gsap.from('#cover .ref,#open',{opacity:0,duration:1,delay:.9});
   gsap.from('#cover .seal',{scale:0,duration:.9,delay:.4,ease:'back.out(2)'});
   gsap.to('#cover .sheen',{xPercent:200,duration:2.6,repeat:-1,repeatDelay:2.5,ease:'power1.inOut',delay:1.2});
-  gsap.to('#open',{boxShadow:'0 0 0 10px rgba(91,75,154,0)',repeat:-1,duration:1.6,ease:'sine.out',startAt:{boxShadow:'0 0 0 0 rgba(91,75,154,.4)'}});
+  gsap.fromTo('#open',{boxShadow:'0 10px 26px rgba(74,61,133,.35),0 0 0 0 rgba(200,165,95,.55)'},{boxShadow:'0 10px 26px rgba(74,61,133,.35),0 0 0 14px rgba(200,165,95,0)',repeat:-1,duration:1.8,ease:'sine.out'});
 
   // Prep: flowers closed, cross strokes undrawn, text hidden
   gsap.set('.bloom',{opacity:0,scale:.75,rotation:function(i){return i?10:-10}});
@@ -229,21 +244,23 @@ p{margin:.4rem 0}
 
   function sceneOne(){
     gsap.timeline({defaults:{ease:'power2.out'}})
-      .to('#s1 .wrap',{opacity:1,y:0,duration:1.1,startAt:{y:30}})
-      .to('#crossA',{strokeDashoffset:0,duration:1},'-=.5')
-      .to('#crossB',{strokeDashoffset:0,duration:.7},'-=.2')
-      .to('#s1 .r1',{opacity:1,y:0,duration:1,stagger:.35,startAt:{y:18}},'-=.2')
-      .to('#s1 .rule',{opacity:1,scaleX:1,duration:1},'-=1.4');
+      .to('#s1 .wrap',{opacity:1,y:0,duration:.7,startAt:{y:24}})
+      .to('#crossA',{strokeDashoffset:0,duration:.55,ease:'power2.inOut'},.15)
+      .to('#crossB',{strokeDashoffset:0,duration:.4,ease:'power2.inOut'},.45)
+      .fromTo('.cross',{filter:'drop-shadow(0 0 0 rgba(200,165,95,0))'},{filter:'drop-shadow(0 0 7px rgba(200,165,95,.75))',duration:.45,yoyo:true,repeat:1,ease:'sine.inOut'},.8)
+      .to('#s1 .r1',{opacity:1,y:0,duration:.8,stagger:.22,startAt:{y:16}},.7)
+      .to('#s1 .rule',{opacity:1,scaleX:1,duration:.8},1);
   }
 
   // Open: seal splits, curtains part, flowers bloom, scene one plays
   document.getElementById('open').addEventListener('click',function(){
     this.disabled=true;
-    gsap.timeline({onComplete:function(){reveal();sceneOne();startPetals();startSparkles();}})
-      .to('#cover .inner',{opacity:0,scale:.9,duration:.6})
-      .to('#cover .l',{xPercent:-101,duration:1.5,ease:'power3.inOut'},'-=.1')
-      .to('#cover .r',{xPercent:101,duration:1.5,ease:'power3.inOut'},'<')
-      .add(bloom,'<+.35');
+    gsap.timeline({onComplete:function(){reveal();startPetals();startSparkles();}})
+      .to('#cover .inner',{opacity:0,scale:.92,duration:.5})
+      .to('#cover .l',{xPercent:-101,duration:1.4,ease:'power3.inOut'},'-=.1')
+      .to('#cover .r',{xPercent:101,duration:1.4,ease:'power3.inOut'},'<')
+      .add(bloom,'<+.3')
+      .add(sceneOne,'<+.55');
   });
 
   // Scroll scenes
